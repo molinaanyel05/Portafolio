@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router} from 'react-router-dom';
+import AnyelFea from './AnyelFea';
+import AnyelSexy from './AnyelSexy';
+import {Route, Switch } from 'react-router-dom';
+import SexyNavBar from './SexyNavBar';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Router>
     <App />
-  </React.StrictMode>,
+  </Router>,
   document.getElementById('root')
 );
 
