@@ -3,11 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import SexyNavBar from './SexyNavBar';
+import Home from './Vistas/Home';
+import About from './Vistas/About';
+import MySkills from './Vistas/MySkills';
+import Work from './Vistas/Work';
+import Contact from './Vistas/Contact';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+      <SexyNavBar/>
+      <App/>
+      <Switch>
+        <Route path="/about" component={About} />
+        <Route path="/myskills" component={MySkills} />
+        <Route path="/work" component={Work} />
+        <Route path="/contact" component={Contact} />
+        <Route exact path="/" component={Home} />
+      </Switch>
+  </Router>,
   document.getElementById('root')
 );
 
