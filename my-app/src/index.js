@@ -15,13 +15,6 @@ ReactDOM.render(
   <Router>
       <SexyNavBar/>
       <App/>
-      <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/myskills" component={MySkills} />
-        <Route path="/work" component={Work} />
-        <Route path="/contact" component={Contact} />
-        <Route exact path="/" component={Home} />
-      </Switch>
   </Router>,
   document.getElementById('root')
 );
